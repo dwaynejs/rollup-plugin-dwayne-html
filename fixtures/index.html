@@ -1,0 +1,26 @@
+<div
+  class="a b c"
+  attr="{123"
+  d-class="{{ value }}"
+  d-style#comment="{{ ...args }}"
+  d-on(click)="{::this.onClick}"
+  d-bind(keydown,keypress)#comment="{(e) => this.onKeyDown}"
+  d-bind(keyup)#comment="{function (e) {onKeyUp(this, e)}}"
+  computed="{this[a]}"
+  usual="{this.b}"
+  quotes="{a + '' + b + '&' + '\u00a0' + `1${ '2' + '&quot;' + '\u0022' }3`}"
+  camelCase=""
+  empty
+>
+  &nbsp;&quot;&dagger;&#xfeff;{text}continuation
+  <img src="{require('./image.png')}"/>
+  <span>123{456</span>
+  <Block/>
+  <!-- comment -->
+  <d-if if="{a}">
+    123
+  </d-if>
+  <d-else>
+    456
+  </d-else>
+</div>

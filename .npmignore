@@ -1,0 +1,13 @@
+.idea/
+node_modules/
+
+.babelrc
+.editorconfig
+
+bundle.js
+bundle.js.map
+
+fixtures/
+entry.js
+rollup.config.build.js
+rollup.config.dev.js
