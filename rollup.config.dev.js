@@ -8,15 +8,12 @@ export default {
   format: 'iife',
   moduleName: 'index',
   plugins: [
-    pugHtml({
-      include: '**/*.pug'
-    }),
     dwayneHtml({
       include: [
         '**/*.pug',
         '**/*.html'
       ],
-      keepOriginal: false
+      keepOriginal: true
     }),
     babel({
       include: [

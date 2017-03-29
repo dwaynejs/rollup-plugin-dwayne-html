@@ -20,7 +20,7 @@ var plugin = function () {
     transform: function transform(code, id) {
       if (filter(id)) {
         return {
-          code: 'export default ' + parseDwayneHTML(code, options) + ';',
+          code: 'var func;\n\nexport default ' + parseDwayneHTML(code, options),
           map: { mappings: '' }
         };
       }
