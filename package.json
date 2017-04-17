@@ -1,10 +1,10 @@
 {
   "name": "rollup-plugin-dwayne-html",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "build/plugin.js",
   "jsnext:main": "lib/plugin.js",
   "dependencies": {
-    "parse-dwayne-html": "^0.1.0",
+    "parse-dwayne-html": "^1.0.0",
     "rollup-pluginutils": "^2.0.1"
   },
   "devDependencies": {
