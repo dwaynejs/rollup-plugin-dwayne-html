@@ -1,6 +1,6 @@
 import babel from 'rollup-plugin-babel';
 
-import dwayneHtml from './lib/plugin';
+import dwayneHtml from './src/plugin';
 
 export default {
   entry: 'entry.js',

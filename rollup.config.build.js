@@ -1,8 +1,8 @@
 import babel from 'rollup-plugin-babel';
 
 export default {
-  entry: 'lib/plugin.js',
-  dest: 'build/plugin.js',
+  entry: 'src/plugin.js',
+  dest: 'lib/plugin.js',
   external: Object.keys(require('./package.json').dependencies),
   format: 'cjs',
   plugins: [
