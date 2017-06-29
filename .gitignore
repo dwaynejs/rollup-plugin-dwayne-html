@@ -1,7 +1,6 @@
-*.log
-
-node_modules/
 .idea/
+node_modules/
 
-bundle.js
-bundle.js.map
+.nyc_output/
+coverage/
+lib/

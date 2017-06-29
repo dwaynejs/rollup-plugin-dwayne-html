@@ -1,22 +1,46 @@
 {
   "name": "rollup-plugin-dwayne-html",
-  "version": "4.0.0",
-  "main": "lib/plugin.js",
-  "dependencies": {
-    "parse-dwayne-html": "^4.0.0",
-    "rollup-pluginutils": "^2.0.1"
-  },
+  "version": "5.0.0",
+  "main": "lib/index.js",
   "devDependencies": {
-    "babel-core": "^6.23.1",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-es2015": "^6.24.0",
-    "babel-preset-latest": "^6.22.0",
-    "babel-preset-stage-0": "^6.22.0",
-    "rollup": "^0.41.5",
-    "rollup-plugin-babel": "^2.7.1"
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chalk": "^1.1.3",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.2",
+    "rollup": "^0.43.0",
+    "sourcemap-codec": "^1.3.1"
   },
   "scripts": {
-    "compile": "rollup -c rollup.config.dev.js",
-    "build": "rollup -c rollup.config.build.js"
+    "build": "babel src --out-dir lib",
+    "test": "nyc mocha test/index.js --reporter dot",
+    "prepublish": "npm test && npm run build"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "sourceMap": "inline",
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "test/**/*.js",
+      "node_modules/**/*"
+    ],
+    "reporter": [
+      "html"
+    ],
+    "cache": true,
+    "all": true
+  },
+  "dependencies": {
+    "highlight-error": "^1.0.2",
+    "lodash": "^4.17.4",
+    "rollup-pluginutils": "^2.0.1",
+    "transform-dwayne-html": "^5.7.2"
   }
 }
