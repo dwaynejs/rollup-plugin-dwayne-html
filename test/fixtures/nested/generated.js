@@ -48,11 +48,7 @@ var tmpl = (_tmpl = [
       {
         type: MyBlock,
         args: {
-          __source: {
-            file: "test/fixtures/nested/index.html",
-            line: 10,
-            column: 3
-          }
+          __source: "test/fixtures/nested/index.html:10:3"
         }
       }
     ]
