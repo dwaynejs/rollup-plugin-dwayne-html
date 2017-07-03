@@ -34,7 +34,7 @@ var tmpl = (_tmpl = [
         args: {
           "Class:active": (_mixin = function (_) {
             return _.active;
-          }, _mixin.mixin = Class, _mixin)
+          }, _mixin.mixin = Class, _mixin.__source = "test/fixtures/nested/index.html:7:8", _mixin)
         },
         children: [
           {
